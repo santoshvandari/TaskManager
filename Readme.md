@@ -10,6 +10,11 @@ You System must have the following things to use this project.
 
 
 Follow the mentioned procedure to run this project in your local system.
+ - Clone or Download the Repository
+```bash
+    git clone 
+    cd TaskManager
+```
  - Create the Virtual Environment Before installing the requirements. 
  ```Bash
     python3 -m virtualenv venv #For Linux User
@@ -18,12 +23,20 @@ Follow the mentioned procedure to run this project in your local system.
  ```
   - Activate the Virtual Environment
   ```bash
-    source venv/bin/activate  #For Linux User
+    source venv/bin/activate  #For Linux and Windows User
     venv/Scripts/activate  #For Windows User
-  ```
-     
-     Note: It is not Necessary but recommanded.
+
+     Note: It is not Necessary to Create Virtual Environment but recommanded.
+  ``` 
  - Install the Requirements
 ```bash
-    pip install 
+    pip install -r requirements.txt
 ```
+ - Run the Server
+```bash
+    python3 manage.py runserver #FOr Linux User
+    python manage.py runserver # For Windows User
+```
+
+## Contribution
+

@@ -1,6 +1,6 @@
 # Task Scheduler
 ## Introduction
-This is the web based application for task management. It is developed using the technologies like HTML, CSS, JS and BootStrap in frontend and python(django Framework) in backend as well as sqlite database(default) as a database. 
+This is the web based application for task management. It is developed using the technologies like HTML, CSS, JS and BootStrap in frontend and python(django Framework) in backend as well as sqlite database(default) as a database. This may be suitable for the college project.
 
 ## Features
 The Web app has the following features.
@@ -44,6 +44,10 @@ Follow the mentioned procedure to run this project in your local system.
     python3 manage.py runserver #FOr Linux User
     python manage.py runserver # For Windows User
 ```
+ - Open the url in Browser
+ ```bash
+    
+ ```
 
 ## Contributing
 We welcome contributions! If you'd like to contribute to this project, please check out our [Contribution Guidelines](Contribution.md).

@@ -46,7 +46,7 @@ Follow the mentioned procedure to run this project in your local system.
 ```
  - Open the url in Browser
  ```bash
-    
+    http://127.0.0.1:8000/
  ```
 
 ## Contributing

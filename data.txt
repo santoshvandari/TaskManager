@@ -1,0 +1,10 @@
+Auth App for:
+     - Login
+     - SignUp
+     - Logout
+
+ToDo App for:
+     - Creating Task
+     - Editing Task
+     - Deleteing Task
+     - Marking as Completed Task

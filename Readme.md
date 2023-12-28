@@ -1,6 +1,13 @@
 # Task Scheduler
 ## Introduction
-The project is focus on managing the task. It is developed using the technologies like HTML, CSS, JS and BootStrap in frontend and python(django Framework) in backend. 
+This is the web based application for task management. It is developed using the technologies like HTML, CSS, JS and BootStrap in frontend and python(django Framework) in backend as well as sqlite database(default) as a database. 
+
+## Features
+The Web app has the following features.
+ - A new User can Create the Account.
+ - A existing User can login using the credentials. 
+ - A logged user can add and remove the task.
+ - A logged user can modify the existing task.
 
 ## Usages
 You System must have the following things to use this project.
@@ -12,7 +19,7 @@ You System must have the following things to use this project.
 Follow the mentioned procedure to run this project in your local system.
  - Clone or Download the Repository
 ```bash
-    git clone 
+    git clone https://github.com/santoshvandari/TaskManager.git 
     cd TaskManager
 ```
  - Create the Virtual Environment Before installing the requirements. 
@@ -38,5 +45,11 @@ Follow the mentioned procedure to run this project in your local system.
     python manage.py runserver # For Windows User
 ```
 
-## Contribution
+## Contributing
+We welcome contributions! If you'd like to contribute to this project, please check out our [Contribution Guidelines](Contribution.md).
 
+## Code of Conduct
+Please review our [Code of Conduct](CodeOfConduct.md) before participating in this project.
+
+## License
+This project is licensed under the [License](LICENSE).

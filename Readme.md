@@ -19,7 +19,7 @@ Follow the mentioned procedure to run this project in your local system.
   - Activate the Virtual Environment
   ```bash
     source venv/bin/activate  #For Linux User
-    venv/bin/activate  #For Windows User
+    venv/Scripts/activate  #For Windows User
   ```
      
      Note: It is not Necessary but recommanded.

@@ -14,19 +14,21 @@ body{
 .form-wrapper{
     background: #1B4242;
     color: #fff;
+    padding: 20px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.form-wrapper h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 38px;
+    text-decoration: underline;
+
 }
 .form-wrapper form{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     gap: 10px;
-    
 }
-.form-wrapper{
-    width: 400px;
-    /* background: blue; */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
+/* form  */

@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
+    <link rel="stylesheet" href="/static/Auth/style.css">
 </head>
 <body>
+    <div class="form-wrapper">
+        <h2>SignUp</h2>
+        <form method="post">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Enter a Username">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter a Email">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter a Password">
+            <input type="submit" value="SignUp">
+            <p>Already have an account? <a href="/login">Login</a></p>
+            
+        </form>
+    </div>
     
 </body>
 </html>

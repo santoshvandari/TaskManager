@@ -12,9 +12,9 @@
         <form method="post">
             {% csrf_token %}
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" placeholder="Enter a Username"/>
+            <input type="text" name="username" id="username" placeholder="Enter a Username" required/>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="Enter a Password"/>
+            <input type="password" name="password" id="password" placeholder="Enter a Password" required/>
             <div class="btn-wrapper">
                 <button type="submit">Login</button>
                 <p>Don't Have Account?<a href="/signup">Register</a></p>

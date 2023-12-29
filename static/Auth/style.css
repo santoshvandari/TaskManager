@@ -29,6 +29,41 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
-/* form  */
+form label{
+    font-size: 20px;
+}
+form input{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.btn-wrapper{
+    text-align: center;
+}
+.btn-wrapper button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background: #5C8374;
+    color: #fff;
+    transition: background,color 0.3s ease;
+}
+.btn-wrapper button:hover{
+    background: #fff;
+    color: #000;
+}
+.btn-wrapper p a{
+    font-size: 18px;
+    padding: 0px 10px;
+    /* text-decoration: none; */
+    color: #fff;
+}

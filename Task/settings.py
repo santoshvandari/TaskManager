@@ -56,7 +56,7 @@ ROOT_URLCONF = 'Task.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['Templates','Templates/Auth','Templates/ToDo'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

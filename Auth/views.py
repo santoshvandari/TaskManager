@@ -5,4 +5,4 @@ def log_in(request):
     return render(request,'index.html')
 
 def signup(request):
-    return render(request,'Auth/signup.html')
+    return render(request,'signup.html')

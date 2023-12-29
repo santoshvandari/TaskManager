@@ -17,5 +17,5 @@ Including another URLconf
 from django.urls import path,include
 
 urlpatterns = [
-    path('',include('Auth.urls.py')),
+    path('login',views.log_in,name='login'),
 ]

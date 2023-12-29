@@ -12,15 +12,15 @@
         <form method="post">
             {% csrf_token %}
             <label for="firstname">First Name</label>
-            <input type="text" name="firstname" id="firstname" placeholder="Enter a First Name">
+            <input type="text" name="firstname" id="firstname" placeholder="Enter a First Name" required/>
             <label for="lastname">Last Name</label>
-            <input type="text" name="lastname" id="lastname" placeholder="Enter a Last Name">
+            <input type="text" name="lastname" id="lastname" placeholder="Enter a Last Name" required/>
             <label for="username">Username</label>
-            <input type="text" name="username" id="username" placeholder="Enter a Username">
+            <input type="text" name="username" id="username" placeholder="Enter a Username" required/>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Enter a Email">
+            <input type="email" name="email" id="email" placeholder="Enter a Email" required/>
             <label for="password">Password</label>
-            <input type="password" name="password" id="password" placeholder="Enter a Password">
+            <input type="password" name="password" id="password" placeholder="Enter a Password" required/>
            <div class="btn-wrapper">
             <button type="submit">SignUp</button>
             <p>Already have an account? <a href="/login">Login</a></p>

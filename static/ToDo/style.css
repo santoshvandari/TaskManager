@@ -53,4 +53,16 @@ div.info p{
 div.info p a{
     text-decoration: none;
     color: #00ffff;
+    font-size: 18px;
 }  
+section#main{
+    position: absolute;
+    top: 0;
+    left: 250px;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease;
+    padding: 20px;
+    overflow: auto;
+    color: #fff;
+}

@@ -10,6 +10,7 @@
     <div class="form-wrapper">
         <h2>SignUp</h2>
         <form method="post">
+            {% csrf_token %}
             <label for="firstname">First Name</label>
             <input type="text" name="firstname" id="firstname" placeholder="Enter a First Name">
             <label for="lastname">Last Name</label>
@@ -23,8 +24,7 @@
            <div class="btn-wrapper">
             <button type="submit">SignUp</button>
             <p>Already have an account? <a href="/login">Login</a></p>
-           </div>
-            
+           </div>          
         </form>
     </div>
     

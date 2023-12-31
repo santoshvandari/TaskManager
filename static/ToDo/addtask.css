@@ -1,12 +1,13 @@
-section#main{
-    /* position: relative; */
-}
 .form-wrapper{
     /* transition: all 0.2s ease-in-out;
     position: fixed; 
     top: -250px;
     left: 40%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .form-wrapper form{
     display: flex;
     flex-direction: column;
@@ -35,10 +36,7 @@ form input{
     border-radius: 5px;
     border: none;
     outline: none;
-}
-form input::placeholder{
     font-size: 18px;
-
 }
 form .btn-wrapper button[type="submit"]{
     padding: 10px;

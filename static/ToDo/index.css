@@ -1,4 +1,24 @@
 .task-wrapper{
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 200px;
+}
+.task-wrapper h3{
+    font-size: 35px;
+    text-decoration: underline;
+}
+table{
+    border-collapse: collapse;
+    text-align: center;
+}
+table tr td, table tr th{
+    border: 1px solid #9EC8B9;
+    padding: 8px;
+    font-size: 18px;
+}
+table tbody tr td:nth-child(2){
+    width: 60%;
+    text-align: justify;
 }

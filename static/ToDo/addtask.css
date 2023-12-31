@@ -1,8 +1,11 @@
+section#main{
+    /* position: relative; */
+}
 .form-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    transition: all 0.2s ease-in-out;
+    position: fixed; 
+    top: -250px;
+    left: 40%;
 }
 .form-wrapper form{
     display: flex;
@@ -51,4 +54,9 @@ form .btn-wrapper button[type="submit"]{
 form .btn-wrapper button[type="submit"]:hover{
     background: #fff;
     color: #1B4242;
+}
+.show{
+    position: fixed; 
+    top: 20px;
+    left: 40%;
 }

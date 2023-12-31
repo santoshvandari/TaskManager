@@ -6,6 +6,7 @@
     <title>DashBoard</title>
     <link rel="stylesheet" href="/static/ToDo/basestyle.css"/>
     <link rel="stylesheet" href="/static/ToDo/addtask.css"/>
+    <script defer src="/static/ToDo/script.js"></script>
 </head>
 <body>
     <main>
@@ -24,7 +25,8 @@
         </section>
         <section id="main">
             <div class="main">
-                <div class="form-wrapper">
+                <button id="addtask">Add Task</button>
+                <div class="form-wrapper hide">
                     <form action="#" method="post">
                         <h3>Add Task</h3>
                         <label for="taskname">Task</label>

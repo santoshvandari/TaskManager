@@ -1,0 +1,22 @@
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-wrapper form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: #5C8374;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: ;
+}
+form h3{
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}

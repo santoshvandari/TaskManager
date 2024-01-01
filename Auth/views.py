@@ -20,6 +20,18 @@ def log_in(request):
 def signup(request):
     if request.user.is_authenticated:
         return redirect('/')
+    if request.method == 'POST':
+        firstname=request.POST['firstname']
+        lastname=request.POST['lastname']
+        email=request.POST['email']
+        username = request.POST['username']
+        password = request.POST['password']
+        if User.objects.filter(username=username).exists():
+            return render(request,'signup.html',{'error':'Username already exists'})
+        else:
+            user = User.objects.create_user(username=username,password=password)
+            user.save()
+            return redirect('/login')
     return render(request,'signup.html')
 
 def log_out(request):

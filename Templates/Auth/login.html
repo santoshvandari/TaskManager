@@ -11,6 +11,7 @@
         <h2>Login</h2>
         <form method="post">
             {% csrf_token %}
+            <p class='error'>{{error}}</p>
             <label for="username">Username</label>
             <input type="text" name="username" id="username" placeholder="Enter a Username" required/>
             <label for="password">Password</label>

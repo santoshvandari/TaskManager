@@ -67,3 +67,7 @@ form input{
     /* text-decoration: none; */
     color: #fff;
 }
+p.error{
+    color: red;
+    font-size: 18px;
+}

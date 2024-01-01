@@ -10,8 +10,9 @@ def log_in(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
-        if authenticate(username=username,password=password) is not None:
-            login(request)
+        user=authenticate(username=username,password=password)
+        if user is not None:
+            login(request,user)
             return redirect('/')
         else:
             return render(request,'login.html',{'error':'Invalid Credentials'})
@@ -32,7 +33,7 @@ def signup(request):
         else:
             user = User.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname)
             user.save()
-            login(request)
+            login(request,user)
             return redirect('/login')
     return render(request,'signup.html')
 

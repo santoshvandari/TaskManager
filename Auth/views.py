@@ -30,8 +30,9 @@ def signup(request):
         if User.objects.filter(username=username).exists():
             return render(request,'signup.html',{'error':'Username already exists'})
         else:
-            user = User.objects.create_user(username=username,password=password)
+            user = User.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname)
             user.save()
+            login(request)
             return redirect('/login')
     return render(request,'signup.html')
 

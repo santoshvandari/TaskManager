@@ -9,11 +9,10 @@ def home(request):
     return render(request,'index.html')
 
 def AddTask(request):
-    user = User.objects.get(username=request.user.username)
-    print(user)
     if not request.user.is_authenticated:
         return redirect('/login')
     if request.method == 'POST':
+        user=
         task_desc = request.POST.get('taskname').strip()
         task_status=False
         if task_desc and user and task_status==False:

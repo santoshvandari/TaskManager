@@ -13,7 +13,7 @@ def AddTask(request):
         return redirect('/login')
     if request.method == 'POST':
         task_desc = request.POST.get('taskname').strip()
-        user = request.user
+        user = User
         task_status=False
         if task_desc and user and task_status==False:
             tasksave=TaskInfo(user=user,task_desc=task_desc,task_status=task_status)

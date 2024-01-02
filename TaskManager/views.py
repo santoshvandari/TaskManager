@@ -27,3 +27,12 @@ def AddTask(request):
         else:
             return render(request,'addtask.html',{'error':'Invalid Data'})
     return render(request,'addtask.html')
+
+def DeleteTask(request,id):
+    if not request.user.is_authenticated:
+        return redirect('/login')
+    if request.method == 'POST':
+        task = TaskInfo.objects.get(id=id)
+        task.delete()
+        return redirect('/')
+    return render(request,'index.html')

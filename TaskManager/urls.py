@@ -20,4 +20,7 @@ from TaskManager import views
 urlpatterns = [
     path('',views.home,name='home'),
     path('addtask/',views.AddTask,name='addtask'),
+    path('deletetask/<id>/',views.DeleteTask,name='deletetask'),
+    path('update/<id>/',views.UpdateTask,name='update'),
+    path('edit/<id>/',views.EditTask,name='edit'),
 ]

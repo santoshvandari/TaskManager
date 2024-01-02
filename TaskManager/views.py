@@ -6,7 +6,12 @@ from TaskManager.models import TaskInfo
 def home(request):
     if not request.user.is_authenticated:
         return redirect('/login')
-    return render(request,'index.html')
+    user = request.user
+    tasklist= TaskInfo.objects.filter(user=user)
+    if tasklist is not None:
+        return render(request,'index.html',{'tasklist':tasklist})
+    else:
+        return render(request,'index.html')
 
 def AddTask(request):
     if not request.user.is_authenticated:

@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DashBoard</title>
     <link rel="stylesheet" href="/static/ToDo/basestyle.css" />
-    <link rel="stylesheet" href="/static/ToDo/index.css"/>
+    <link rel="stylesheet" href="/static/ToDo/index.css" />
 </head>
 
 <body>
@@ -20,7 +20,9 @@
                     <li><a href="/logout">Logout</a></li>
                 </ul>
                 <div class="info">
-                    <p>Developed By <br /><a href="bhandari-santosh.com.np" target="_blank">Santosh Bhandari</a></p>
+                    <p>
+                        Developed By <br /><a href="bhandari-santosh.com.np" target="_blank">Santosh Bhandari</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -38,30 +40,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Complete the Code</td>
-                                <td>Pending</td>
-                                <td>Edit | Delete | Update</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Complete the CodeComplete the CodeComplete the CodeComplete the CodeComplete the CodeComplete the Code</td>
-                                <td>Pending</td>
-                                <td>Edit | Delete | Update</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Complete the Code</td>
-                                <td>Completed</td>
-                                <td>Edit | Delete | Update</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Complete the Code</td>
-                                <td>Pending</td>
-                                <td>Edit | Delete | Update</td>
-                            </tr>
+                            {% if tasklist %}
+                                {% for task in tasklist %}
+                                    <tr>
+                                        <td>{{ forloop.counter }}</td>
+                                        {% if task.task_status == False %}
+                                            <td>{{ task.task_desc }}</td>
+                                            <td>Pending</td>
+                                        {% else %}
+                                            <td><del>{{ task.task_desc }}</del></td>
+                                            <td>Completed</td>
+                                        {% endif %}
+                                        <td>Edit | Delete | Update</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="4">No Task Found</td>
+                                </tr>
+                            {% endif %}
                         </tbody>
                     </table>
                 </div>

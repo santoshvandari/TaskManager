@@ -14,6 +14,11 @@ def AddTask(request):
     if request.method == 'POST':
         task_desc = request.POST.get('taskname').strip()
         user = request.user
-        status=False
-        TaskInfo.objects.create(user=user,task_desc=task_desc)
-        return redirect('/addtask')
+        task_status=False
+        if task_desc and user and task_status==False:
+            tasksave=TaskInfo(user=user,task_desc=task_desc,task_status=task_status)
+            tasksave.save()
+            return redirect('/')
+        else:
+            return render(request,'addtask.html',{'error':'Invalid Data'})
+    return render(request,'addtask.html')

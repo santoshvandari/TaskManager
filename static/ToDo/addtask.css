@@ -58,3 +58,7 @@ form .btn-wrapper button[type="submit"]:hover{
     top: 20px;
     left: 40%;
 } */
+p.error{
+    color:red;
+    font-size: 16;
+}

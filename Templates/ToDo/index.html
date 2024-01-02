@@ -1,33 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends "base.html" %}
+{% block title %}DashBoard{% endblock title %}
     <title>DashBoard</title>
     <link rel="stylesheet" href="/static/ToDo/basestyle.css" />
+{% block style %}
     <link rel="stylesheet" href="/static/ToDo/index.css" />
-</head>
-
-<body>
-    <main>
-        <section id="sidebar">
-            <div class="sidebar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="/addtask">Add Task</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                </ul>
-                <div class="info">
-                    <p>
-                        Developed By <br /><a href="bhandari-santosh.com.np" target="_blank">Santosh Bhandari</a>
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="main">
-            <div class="main">
+{% endblock style %}
+{% block mainsection %}
                 <div class="task-wrapper">
                     <h3>Task List</h3>
                     <table border="1">
@@ -62,9 +40,4 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </section>
-    </main>
-</body>
-
-</html>
+{% endblock mainsection %}

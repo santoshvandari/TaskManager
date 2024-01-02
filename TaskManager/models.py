@@ -12,4 +12,4 @@ class TaskInfo(models.Model):
     class Meta:
         db_table = 'TaskInfo'
         verbose_name_plural = 'TaskInfo'
-        ordering = ['-task_created']
+        ordering = ['task_created']

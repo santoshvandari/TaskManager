@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        {% block title %}{% endblock title %}
+    </title>
+    <link rel="stylesheet" href="/static/ToDo/basestyle.css" />
+    {% block style %}{% endblock style %}
 </head>
+
 <body>
-    
+    <main>
+        <section id="sidebar">
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/addtask">Add Task</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+                <div class="info">
+                    <p>
+                        Developed By <br /><a href="bhandari-santosh.com.np" target="_blank">Santosh Bhandari</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="main">
+            <div class="main">
+                <div class="task-wrapper">
+                    <h3>Task List</h3>
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>S.N.</th>
+                                <th>Task</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if tasklist %}
+                                {% for task in tasklist %}
+                                    <tr>
+                                        <td>{{ forloop.counter }}</td>
+                                        {% if task.task_status == False %}
+                                            <td>{{ task.task_desc }}</td>
+                                            <td>Pending</td>
+                                        {% else %}
+                                            <td><del>{{ task.task_desc }}</del></td>
+                                            <td>Completed</td>
+                                        {% endif %}
+                                        <td>Edit | Delete | Update</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="4">No Task Found</td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

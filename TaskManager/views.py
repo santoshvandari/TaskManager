@@ -12,7 +12,7 @@ def AddTask(request):
     if not request.user.is_authenticated:
         return redirect('/login')
     if request.method == 'POST':
-        user=
+        user = request.user
         task_desc = request.POST.get('taskname').strip()
         task_status=False
         if task_desc and user and task_status==False:

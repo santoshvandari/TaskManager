@@ -29,10 +29,21 @@ def AddTask(request):
     return render(request,'addtask.html')
 
 def DeleteTask(request,id):
+    # if not request.user.is_authenticated:
+    #     return redirect('/login')
+    # if request.method == 'POST':
+    #     task = TaskInfo.objects.get(id=id)
+    #     task.delete()
+    #     return redirect('/')
+    return render(request,'index.html')
+
+def UpdateTask(request,id):
     if not request.user.is_authenticated:
         return redirect('/login')
-    if request.method == 'POST':
-        task = TaskInfo.objects.get(id=id)
-        task.delete()
-        return redirect('/')
-    return render(request,'index.html')
+    task = TaskInfo.objects.get(id=id)
+    if task.task_status == False:
+        task.task_status = True
+    else:
+        task.task_status = False
+    task.save()
+    return redirect('/')

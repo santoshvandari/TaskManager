@@ -66,7 +66,7 @@ section#main{
     overflow: auto;
     color: #fff;
 }
-section#preloader{
+section.preloader{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,4 +75,18 @@ section#preloader{
     width: 100%;
     height: 100vh;
     background: #092635;
+}
+.preloader div.loader{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 8px solid #fff;
+    border-bottom-color: #00ffff;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+    
 }

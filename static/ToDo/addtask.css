@@ -1,10 +1,7 @@
 .form-wrapper{
-    transition: all 0.2s ease-in-out;
-    position: fixed; 
-    top: -250px;
-    left: 40%;
-    z-index: 999;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .form-wrapper form{
     display: flex;
@@ -51,11 +48,6 @@ form .btn-wrapper button[type="submit"]:hover{
     background: #fff;
     color: #1B4242;
 }
-/* .show{
-    position: fixed; 
-    top: 20px;
-    left: 40%;
-} */
 p.error{
     color:red;
     font-size: 16;

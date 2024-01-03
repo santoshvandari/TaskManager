@@ -25,7 +25,7 @@ def AddTask(request):
             tasksave.save()
             return redirect('/')
         else:
-            return render(request,'addtask.html')
+            return render(request,'addtask.html',{'error':'Invalid Data'})
     return render(request,'addtask.html')
 
 @login_required(login_url='/login')

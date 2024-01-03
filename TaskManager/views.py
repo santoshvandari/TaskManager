@@ -48,6 +48,6 @@ def UpdateTask(request,id):
             else:
                 task.task_status = False
             task.save()
-            return redirect('/')
+        return redirect('/')
     except:
         return redirect('/')

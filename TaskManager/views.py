@@ -72,3 +72,9 @@ def EditTask(request,id):
             return redirect('/')
     except:
         return redirect('/')
+
+@login_required(login_url='/login')
+def Profile(request):
+    user = request.user
+    userinfo=User.objects.get(username=user)
+    return render(request,'profile.html',{'userinfo':userinfo})

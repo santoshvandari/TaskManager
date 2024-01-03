@@ -23,4 +23,5 @@ urlpatterns = [
     path('deletetask/<id>/',views.DeleteTask,name='deletetask'),
     path('update/<id>/',views.UpdateTask,name='update'),
     path('edit/<id>/',views.EditTask,name='edit'),
+    path('profile/',views.Profile,name='profile'),
 ]

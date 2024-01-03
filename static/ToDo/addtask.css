@@ -1,13 +1,10 @@
 .form-wrapper{
-    /* transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     position: fixed; 
     top: -250px;
-    left: 40%; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    left: 40%;
 
+}
 .form-wrapper form{
     display: flex;
     flex-direction: column;

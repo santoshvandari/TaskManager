@@ -1,34 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DashBoard</title>
-    <link rel="stylesheet" href="/static/ToDo/basestyle.css" />
-    <link rel="stylesheet" href="/static/ToDo/index.css"/>
-</head>
-
-<body>
-    <main>
-        <section id="sidebar">
-            <div class="sidebar">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Add Task</a></li>
-                    <li><a href="#">Profile</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
-                <div class="info">
-                    <p>Developed By <br /><a href="bhandari-santosh.com.np" target="_blank">Santosh Bhandari</a></p>
+{% extends "base.html" %}
+{% block tite %}Edit Task{% endblock tite %}
+    {% block style %}
+    <link rel="stylesheet" href="/static/ToDo/addtask.css"/>
+    <script defer src="/static/ToDo/script.js"></script>
+    {% endblock style %}
+{% block mainsection %}
+                <div class="form-wrapper">
+                    <form method="post">
+                        {% csrf_token %}
+                        <h3>Add Task</h3>
+                        <p class='error'>{{error}}</p>
+                        <label for="taskname">Task</label>
+                        <input type="text" name="taskname" id="taskname" value="{{task}}">
+                        <div class="btn-wrapper">
+                            <button type="submit">Update Task</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
-        </section>
-        <section id="main">
-            <div class="main">
-            </div>
-        </section>
-    </main>
-</body>
-
-</html>
+{% endblock mainsection %}      

@@ -51,3 +51,4 @@ def UpdateTask(request,id):
         return redirect('/')
     except:
         return redirect('/')
+    

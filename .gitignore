@@ -4,3 +4,4 @@
 /Auth/migrations/__pycache__
 /TaskManager/__pycache__
 /TaskManager/migrations/__pycache__
+/db.sqlite3

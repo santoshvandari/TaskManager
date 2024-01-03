@@ -30,13 +30,13 @@ def AddTask(request):
 
 @login_required(login_url='/login')
 def DeleteTask(request,id):
-    # if not request.user.is_authenticated:
-    #     return redirect('/login')
-    # if request.method == 'POST':
-    #     task = TaskInfo.objects.get(id=id)
-    #     task.delete()
-    #     return redirect('/')
-    return render(request,'index.html')
+    try:
+        task = TaskInfo.objects.get(user=request.user,id=id)
+        if task:
+            task.delete()
+        return redirect('/')
+    except:
+        return redirect('/')
 
 @login_required(login_url='/login')
 def UpdateTask(request,id):

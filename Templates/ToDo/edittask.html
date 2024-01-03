@@ -1,2 +1,21 @@
 {% extends "base.html" %}
-{% block title %}Edit Task{% endblock title %}
+{% block tite %}Edit Task{% endblock tite %}
+    {% block style %}
+    <link rel="stylesheet" href="/static/ToDo/addtask.css"/>
+    <script defer src="/static/ToDo/script.js"></script>
+    {% endblock style %}
+{% block mainsection %}
+                <div class="form-wrapper">
+                    <form method="post">
+                        {% csrf_token %}
+                        <h3>Add Task</h3>
+                        <p class='error'>{{error}}</p>
+                        <label for="taskname">Task</label>
+                        <input type="text" name="taskname" id="taskname" placeholder="Enter a Task">
+                        <div class="btn-wrapper">
+                            <button type="submit">Add Task</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+{% endblock mainsection %}      

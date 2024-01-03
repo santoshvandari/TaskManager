@@ -52,3 +52,21 @@ def UpdateTask(request,id):
     except:
         return redirect('/')
     
+@login_required(login_url='/login')
+def EditTask(request,id):
+    try:
+        task=TaskInfo.objects.get(user=request.user,id=id)
+        if task:
+            if request.method == 'POST':
+                task_desc = request.POST.get('taskname').strip()
+                if task_desc:
+                    task.task_desc = task_desc
+                    task.save()
+                    return redirect('/')
+                else:
+                    return render(request,'edit.html',{'error':'Invalid Data'})
+            return render(request,'edit.html',{'task':task})
+        else:
+            return redirect('/')
+    except:
+        return redirect('/')

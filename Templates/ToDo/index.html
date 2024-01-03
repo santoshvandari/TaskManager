@@ -29,7 +29,7 @@
                                             <td><del>{{ task.task_desc }}</del></td>
                                             <td>Completed</td>
                                         {% endif %}
-                                        <td><a href='edit/{{task.id}}/'>Edit</a> | <a href='deletetask/{{task.id}}'>Delete</a> | <a href='update/{{task.id}}/'>
+                                        <td><a href='edit/{{task.id}}/'><i class="bi bi-pencil-square"></i></a> | <a href='deletetask/{{task.id}}'><i class="bi bi-trash3"></i></a> | <a href='update/{{task.id}}/'>
                                             {% if task.task_status == False %}
                                             <i class="bi bi-square"></i>
                                             {% else %}

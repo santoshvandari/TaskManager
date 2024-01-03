@@ -28,6 +28,7 @@ def AddTask(request):
             return render(request,'addtask.html',{'error':'Invalid Data'})
     return render(request,'addtask.html')
 
+@login_required(login_url='/login')
 def DeleteTask(request,id):
     # if not request.user.is_authenticated:
     #     return redirect('/login')
@@ -37,10 +38,9 @@ def DeleteTask(request,id):
     #     return redirect('/')
     return render(request,'index.html')
 
+@login_required(login_url='/login')
 def UpdateTask(request,id):
-    if not request.user.is_authenticated:
-        return redirect('/login')
-    task = TaskInfo.objects.get(id=id)
+    task = TaskInfo.objects.get(id=id and user=request.user)    
     if task.task_status == False:
         task.task_status = True
     else:

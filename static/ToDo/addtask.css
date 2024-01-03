@@ -3,6 +3,7 @@
     position: fixed; 
     top: -250px;
     left: 40%;
+    z-index: 999;
 
 }
 .form-wrapper form{

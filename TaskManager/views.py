@@ -40,10 +40,14 @@ def DeleteTask(request,id):
 
 @login_required(login_url='/login')
 def UpdateTask(request,id):
-    task = TaskInfo.objects.get(id=id and user=request.user)    
-    if task.task_status == False:
-        task.task_status = True
-    else:
-        task.task_status = False
-    task.save()
-    return redirect('/')
+    try:
+        task=TaskInfo.objects.get(user=request.user,id=id)
+        if task:    
+            if task.task_status == False:
+                task.task_status = True
+            else:
+                task.task_status = False
+            task.save()
+            return redirect('/')
+    except:
+        return redirect('/')

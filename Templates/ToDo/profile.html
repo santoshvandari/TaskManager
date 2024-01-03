@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% block title %}Profile{% endblock title %}
 {% block style %}
-    <link rel="stylesheet" href="/style/ToDo/profile.css"/>
+<link rel="stylesheet" href="/static/ToDo/profile.css">
 {% endblock style %}
 {% block mainsection %}
 <div class="profile-wrapper">
     <div class="profile">
         <div class="profile-image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/User_icon-cp.svg" alt="Avatar" class="avatar">
+            <img src="/static/img/avatar.svg" alt="Avatar" class="avatar">
         </div>
         <div class="profile-info">
             <div class="profile-name">
-                <p class="name">Santosh Bhandari</p>  
+                <p class="name">{{user.\}}</p>  
                 <p class="email">Santosh Bhandari</p>  
             </div>
         </div>

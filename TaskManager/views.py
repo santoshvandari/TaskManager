@@ -66,7 +66,7 @@ def EditTask(request,id):
                 else:
                     return render(request,'edittask.html',{'error':'Invalid Data'})
             taskdesc=task.task_desc
-            return render(request,'edittask.html',{'task':taskdesc})
+            return render(request,'edittasks.html',{'task':taskdesc})
         else:
             return redirect('/')
     except:

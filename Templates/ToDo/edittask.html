@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block tite %}Edit Task{% endblock tite %}
+{% block tite %}Update Task{% endblock tite %}
     {% block style %}
     <link rel="stylesheet" href="/static/ToDo/addtask.css"/>
     <script defer src="/static/ToDo/script.js"></script>
@@ -13,7 +13,7 @@
                         <label for="taskname">Task</label>
                         <input type="text" name="taskname" id="taskname" value="{{task}}">
                         <div class="btn-wrapper">
-                            <button type="submit">Update Task</button>
+                            <button type="submit">Update</button>
                         </div>
                     </form>
                 </div>

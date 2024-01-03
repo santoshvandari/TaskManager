@@ -22,3 +22,11 @@ table tbody tr td:nth-child(2){
     width: 60%;
     text-align: justify;
 }
+table tbody tr td:nth-child(4) a{
+    text-decoration: none;
+    color: #fff;
+}
+table tbody tr td:nth-child(4) a i{
+    cursor: pointer;
+
+}

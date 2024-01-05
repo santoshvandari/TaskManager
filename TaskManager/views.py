@@ -80,5 +80,5 @@ def Profile(request):
     return render(request,'profile.html',{'userinfo':userinfo})
 
 # custom 404 view
-def custom_404(request, exception):
+def ERROR_404(request, exception):
     return render(request, '404page.html', status=404)

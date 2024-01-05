@@ -19,3 +19,6 @@ from django.urls import path,include
 urlpatterns = [
     path('',include('Auth.urls')),
 ]
+
+# Custom 404 Error 
+handler404 = 'TaskManager.views.ERROR_404'

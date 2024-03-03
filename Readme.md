@@ -2,6 +2,17 @@
 ## Introduction
 This is the web based application for task management. It is developed using the technologies like HTML, CSS, JS and BootStrap in frontend and python(django Framework) in backend as well as sqlite database(default) as a database. This may be suitable for the college project.
 
+#### Home Page
+![Home Page](img/home.png)
+
+#### Login Page
+![Login Page](img/login.png)
+
+#### Register Page
+![Register Page](img/register.png)
+
+
+
 ## Features
 The Web app has the following features.
  - A new User can Create the Account.
